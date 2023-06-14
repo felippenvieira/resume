@@ -1,5 +1,36 @@
 import React from 'react';
 
+const experiences = [
+  {
+    id: 1,
+    date: 'oct/22 - now',
+    company: 'STgenetics',
+    jobDescription:
+      'Construction, development and maintenance of company systems with C#, .NET, MVC, SQLServer, JavaScript, Razor, HTML, CSS, JavaScript and Bootstrap',
+    role: 'Junior Full-Stack Developer',
+    competences: [
+      'C#',
+      '.NET',
+      'MVC',
+      'SQL Server',
+      'JavaScript',
+      'Razor',
+      'HTML',
+      'CSS',
+      'Bootstrap',
+    ],
+  },
+  {
+    id: 2,
+    date: 'may/22 - oct/22',
+    company: 'GFT Brazil',
+    jobDescription:
+      "Development of C# .NET back-end projects using OOP, TDD, MVC, API's REST and front-end development with Angular.",
+    role: 'Starter',
+    competences: ['C#', '.NET', 'TDD', 'MVC', 'Angular'],
+  },
+];
+
 const Experience = () => {
   return (
     <section
@@ -22,35 +53,34 @@ const Experience = () => {
           </p>
         </div>
         <div>
-          <div className="flex mt-10 max-w-4xl -ml-24">
-            <span className="mt-8 text-sm text-zinc-700">may/22 - oct/22</span>
-            <div className="p-7 bg-zinc-50 flex rounded gap-20 border-2 border-zinc-100">
-              <div className="">
-                <h2 className="text-lg font-bold mb-2">Bikcraft</h2>
-                <p className="max-w-xs text-sm">
-                  Desenvolvo pequenos projetos como o Bikcraft utilizando apenas
-                  HTML, CSS e JavaScript. Para aplicativos web como a rede
-                  social Dogs.
-                </p>
-              </div>
-              <div>
-                <h2 className="text-lg font-bold mb-2">Desenvolvedor Júnior</h2>
-                <div className="flex flex-wrap gap-2">
-                  <span className="p-2 bg-white rounded text-sm">HTML</span>
-                  <span className="p-2 bg-white rounded text-sm">CSS</span>
-                  <span className="p-2 bg-white rounded text-sm">
-                    Javascript
-                  </span>
-                  <span className="p-2 bg-white rounded text-sm">
-                    UX Design
-                  </span>
-                  <span className="p-2 bg-white rounded text-sm">
-                    UI Design
-                  </span>
+          {experiences.map(
+            ({ id, date, company, jobDescription, role, competences }) => (
+              <div key={id} className="grid-flow-col auto-cols-max gap-1 mt-10">
+                <span className="mt-8 text-sm text-zinc-700">{date}</span>
+                <div className="p-7 bg-zinc-50 grid grid-cols-2 rounded gap-20 border-2 border-zinc-100 max-w-[750px]">
+                  <div>
+                    <h2 className="text-lg font-bold mb-2">{company}</h2>
+                    <p className="max-w-sm text-sm text-zinc-700">
+                      {jobDescription}
+                    </p>
+                  </div>
+                  <div>
+                    <h2 className="text-lg font-bold mb-2">{role}</h2>
+                    <div className="flex flex-wrap gap-2">
+                      {competences.map((competence) => (
+                        <span
+                          key={competence}
+                          className="py-2 px-3 bg-white rounded text-sm"
+                        >
+                          {competence}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
-          </div>
+            ),
+          )}
         </div>
       </div>
     </section>
