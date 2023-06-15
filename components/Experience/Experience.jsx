@@ -35,13 +35,13 @@ const Experience = () => {
   return (
     <section
       id="experiencia"
-      className="grid grid-flow-col auto-cols-max gap-36 my-36 max-w-screen-xl mx-auto"
+      className="grid grid-cols-3 gap-36 my-36 max-w-screen-xl mx-auto px-10"
       aria-label="Experience"
     >
-      <span className="text-[9rem] leading-[1] font-bold break-all text-zinc-200 max-w-sm">
+      <span className="col-span-1 text-[9rem] leading-[1] font-bold break-all text-zinc-200 max-w-sm">
         EXPERIENCE
       </span>
-      <div className="">
+      <div className="col-span-2 ml-10">
         <div className="">
           <p className="text-3xl text-zinc-700 max-w-2xl">
             I have been working as a Front-End Developer since may 2021 on small
@@ -55,7 +55,10 @@ const Experience = () => {
         <div>
           {experiences.map(
             ({ id, date, company, jobDescription, role, competences }) => (
-              <div key={id} className="grid-flow-col auto-cols-max gap-1 mt-10">
+              <div
+                key={id}
+                className="grid-flow-col auto-cols-max gap-1 mt-10 detail-2"
+              >
                 <span className="mt-8 text-sm text-zinc-700">{date}</span>
                 <div className="p-7 bg-zinc-50 grid grid-cols-2 rounded gap-20 border-2 border-zinc-100 max-w-[750px]">
                   <div>

@@ -2,3 +2,57 @@
 @tailwind components;
 @tailwind utilities;
 
+.detail{
+  position: relative;
+}
+
+.detail::before{
+  display: block;
+  content: url("/assets/detalhe.svg");
+  z-index: -1;
+  position: absolute;
+  left: -35px;
+  top: -25px;
+}
+
+.detail-2{
+  position: relative;
+}
+
+.detail-2::before{
+  display: inline-block;
+  position: absolute;
+  content: "";
+  background: linear-gradient(180deg, #b6f829 0%, #67dd0a 100%);
+  width: 4px;
+  height: 20px;
+  left: -4px;
+  top: 55px;
+}
+
+.detail-3 {
+  position: relative;
+}
+
+.detail-3::before{
+  display: inline-block;
+  position: absolute;
+  content: "";
+  background: linear-gradient(180deg, #b6f829 0%, #67dd0a 100%);
+  width: 4px;
+  height: 20px;
+  left: -4px;
+  top: 20px;
+}
+
+.detail-4 {
+  position: relative;
+}
+
+.detail-4::before{
+  display: inline-block;
+  content: url("/assets/detalhe.svg");
+  z-index: 1;
+  position: absolute;
+  top: -60px;
+}

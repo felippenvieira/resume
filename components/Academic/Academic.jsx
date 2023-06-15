@@ -74,12 +74,12 @@ const Academic = () => {
       <section
         id="formacao"
         aria-label="Formação"
-        className="grid grid-flow-col auto-cols-max gap-36 py-36 max-w-screen-xl mx-auto"
+        className="grid grid-cols-3 gap-28 py-36 max-w-screen-xl mx-auto px-10"
       >
-        <span className="text-[9rem] leading-[1] font-bold break-all max-w-sm">
+        <span className="col-span-1 text-[9rem] leading-[1] font-bold break-all max-w-sm">
           ACADEMIC
         </span>
-        <div className="col-span-4 text-white">
+        <div className="ml-14 col-span-2 text-white">
           <p className="text-2xl text-zinc-300 max-w-xl mb-16">
             My most recent academic experience is a degree in{' '}
             <span>Analysis and Systems Development</span>. Additionally, I
@@ -87,8 +87,11 @@ const Academic = () => {
           </p>
           <div className="flex flex-wrap gap-8">
             {academics.map(({ id, title, degree, institution }) => (
-              <div key={id} className="p-5 bg-black rounded w-[240px] grid">
-                <span className="text-zinc-400">{title}</span>
+              <div
+                key={id}
+                className="p-5 bg-black rounded w-[240px] grid detail-3"
+              >
+                <span className="text-zinc-400">{title.toUpperCase()}</span>
                 <h2 className="font-bold text-xl mt-3 mb-10">{degree}</h2>
                 <p className="text-zinc-400 text-xl self-end">{institution}</p>
               </div>
