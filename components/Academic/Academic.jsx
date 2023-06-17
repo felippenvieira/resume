@@ -70,22 +70,22 @@ const languages = [
 
 const Academic = () => {
   return (
-    <div className="bg-zinc-900">
+    <div className="bg-zinc-900 py-10">
       <section
         id="formacao"
         aria-label="Formação"
-        className="grid grid-cols-3 gap-28 py-36 max-w-screen-xl mx-auto px-10"
+        className="lg:grid lg:grid-cols-3 lg:gap-32 lg:my-36 max-w-screen-xl mx-auto px-10 md:px-12"
       >
-        <span className="col-span-1 text-[9rem] leading-[1] font-bold break-all max-w-sm">
+        <span className="text-white lg:text-black pt-10 lg:pt-0 md:col-span-1 block mb-8 lg:mb-0 text-4xl lg:text-[9rem] lg:leading-[1] font-bold lg:break-all max-w-sm">
           ACADEMIC
         </span>
-        <div className="ml-14 col-span-2 text-white">
+        <div className="lg:ml-14 col-span-2 text-white">
           <p className="text-2xl text-zinc-300 max-w-xl mb-16">
             My most recent academic experience is a degree in{' '}
             <span>Analysis and Systems Development</span>. Additionally, I
             always stay updated with intensive online courses.
           </p>
-          <div className="flex flex-wrap gap-8">
+          <div className="flex flex-wrap justify-center sm:justify-start gap-8">
             {academics.map(({ id, title, degree, institution }) => (
               <div
                 key={id}
@@ -98,7 +98,7 @@ const Academic = () => {
             ))}
           </div>
 
-          <div>
+          <div className="px-12 lg:px-0">
             <div className="">
               <div className="flex gap-5 items-center mt-10">
                 <Image
@@ -117,10 +117,10 @@ const Academic = () => {
                   {courses.map(({ id, title, hours }) => (
                     <div
                       key={id}
-                      className="flex justify-between px-1 py-2 text-xl"
+                      className="flex items-center justify-between px-1 py-2 text-xl"
                     >
                       <p>{title}</p>
-                      <span className="text-zinc-400">{hours}</span>
+                      <span className="text-zinc-400 pl-2">{hours}</span>
                     </div>
                   ))}
                 </div>

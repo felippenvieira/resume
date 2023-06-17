@@ -1,3 +1,4 @@
+import ScrollToTop from '@/components/ScrollToTop/ScrollToTop';
 import {
   Academic,
   Experience,
@@ -14,6 +15,7 @@ export default function Home() {
       <Experience />
       <Academic />
       <Footer />
+      <ScrollToTop />
     </main>
   );
 }

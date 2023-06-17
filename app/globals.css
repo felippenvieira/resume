@@ -56,3 +56,17 @@
   position: absolute;
   top: -60px;
 }
+
+@media (max-width: 768px) {
+  .detail::before,
+  .detail-2::before,
+  .detail-3::before {
+    display: none;
+  }
+}
+
+@media (max-width: 1024px) {
+  .detail-4::before {
+    display: none;
+  }
+}
